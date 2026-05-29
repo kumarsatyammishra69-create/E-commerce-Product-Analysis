@@ -9,15 +9,15 @@ print("=" * 50)
 
 print("\n[1] Loading raw data...")
 df = pd.read_csv("raw_data.csv")
-print(f"    Loaded {len(df)} rows")
+print(f"Loaded {len(df)} rows")
 
 
 # CHECK for problems in the data
 
 print("\n[2] Checking data quality...")
-print(f"    Missing values:\n{df.isnull().sum()}")
-print(f"\n    Duplicate rows: {df.duplicated().sum()}")
-print(f"\n    Data types:\n{df.dtypes}")
+print(f"Missing values:\n{df.isnull().sum()}")
+print(f"\n Duplicate rows: {df.duplicated().sum()}")
+print(f"\n Data types:\n{df.dtypes}")
 
 # Remove duplicate rows
 
@@ -90,8 +90,8 @@ print("[6] New columns added: price_label, rating_label, est_revenue ")
 df.to_csv("clean_data.csv", index=False)
 
 print(f"\n[7] Clean data saved to 'clean_data.csv'")
-print(f"\n    Final dataset: {len(df)} rows, {len(df.columns)} columns")
-print(f"\n    Preview:")
+print(f"\n Final dataset: {len(df)} rows, {len(df.columns)} columns")
+print(f"\n Preview:")
 print(df.head())
 
 print("\n STEP 2 COMPLETE! Run step3_analysis.py next.")
