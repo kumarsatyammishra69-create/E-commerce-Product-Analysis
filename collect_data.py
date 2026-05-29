@@ -1,4 +1,3 @@
-
 # DATA COLLECTION
 # We use a FREE public API (no signup needed!) + manual data
 
