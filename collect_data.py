@@ -1,22 +1,16 @@
-# ============================================================
-# STEP 1: DATA COLLECTION
-# This file collects e-commerce product data
+
+# DATA COLLECTION
 # We use a FREE public API (no signup needed!) + manual data
-# ============================================================
 
 import requests          # To fetch data from internet
-import pandas as pd      # To organize data in tables
-import json              # To read JSON format data
-import time              # To add small delays between requests
-
+import pandas as pd      
+import json              
+import time              
 print("=" * 50)
 print("  E-COMMERCE PRODUCT DATA COLLECTION")
 print("=" * 50)
 
-# -------------------------------------------------------
-# METHOD 1: Fetch data from a FREE public API
-# We use "Fake Store API" - a free practice e-commerce API
-# -------------------------------------------------------
+# Fetch data from a FREE public API
 
 print("\n[1] Fetching product data from API...")
 
@@ -28,17 +22,14 @@ try:
 
     products_raw = response.json()            # Convert response to Python list
 
-    print(f"    ✅ Success! Got {len(products_raw)} products from API")
+    print(f" Success! Got {len(products_raw)} products from API")
 
 except requests.exceptions.RequestException as e:
-    print(f"    ❌ API failed: {e}")
+    print(f"  API failed: {e}")
     print("    Using backup manual data instead...")
     products_raw = []
 
-# -------------------------------------------------------
-# METHOD 2: Manual data (backup if API fails)
-# This is like typing data yourself in a spreadsheet
-# -------------------------------------------------------
+# Manual data (backup if API fails)
 
 manual_products = [
     {"id": 101, "title": "Wireless Headphones",     "price": 49.99,  "category": "electronics",  "rating": {"rate": 4.5, "count": 320}},
@@ -56,9 +47,7 @@ all_products = products_raw + manual_products
 
 print(f"\n[2] Total products collected: {len(all_products)}")
 
-# -------------------------------------------------------
 # ORGANIZE DATA INTO A TABLE using Pandas
-# -------------------------------------------------------
 
 print("\n[3] Organizing data into a table...")
 
@@ -78,12 +67,10 @@ for product in all_products:
 # Create a DataFrame (like an Excel table in Python)
 df = pd.DataFrame(rows)
 
-print(f"    ✅ Table created with {len(df)} rows and {len(df.columns)} columns")
+print(f"   Table created with {len(df)} rows and {len(df.columns)} columns")
 print(f"\n    Columns: {list(df.columns)}")
 
-# -------------------------------------------------------
 # SAVE DATA TO CSV FILE
-# -------------------------------------------------------
 
 output_file = "raw_data.csv"
 df.to_csv(output_file, index=False)
@@ -92,4 +79,4 @@ print(f"\n[4] Data saved to '{output_file}'")
 print("\n    Preview (first 5 rows):")
 print(df.head())
 
-print("\n✅ STEP 1 COMPLETE! Run step2_clean_data.py next.")
+print("\n STEP 1 COMPLETE! Run step2_clean_data.py next.")
