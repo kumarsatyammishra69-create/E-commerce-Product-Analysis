@@ -134,7 +134,7 @@ plt.show()   # Also display on screen
 
 print("\n STEP 4 COMPLETE! All files are ready.")
 print("\n Files created:")
-print("   raw_data.csv       — Original collected data")
-print("   clean_data.csv     — Cleaned and processed data")
-print("   analysis_report.txt — Text analysis results")
-print("   dashboard.png      — Visual dashboard")
+print("  raw_data.csv       — Original collected data")
+print("  clean_data.csv     — Cleaned and processed data")
+print("  analysis_report.txt — Text analysis results")
+print("  dashboard.png      — Visual dashboard")
