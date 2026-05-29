@@ -1,0 +1,29 @@
+id,title,price,category,rating,num_reviews,price_label,rating_label,est_revenue
+1,"Fjallraven - Foldsack No. 1 Backpack, Fits 15 Laptops",109.95,clothing,3.9,120,Expensive,Average,13194.0
+2,Mens Casual Premium Slim Fit T-Shirts ,22.3,clothing,4.1,259,Cheap,Good,5775.7
+3,Mens Cotton Jacket,55.99,clothing,4.7,500,Mid-range,Excellent,27995.0
+4,Mens Casual Slim Fit,15.99,clothing,2.1,430,Cheap,Poor,6875.7
+5,John Hardy Women's Legends Naga Gold & Silver Dragon Station Chain Bracelet,695.0,jewelry,4.6,400,Expensive,Excellent,278000.0
+6,Solid Gold Petite Micropave ,168.0,jewelry,3.9,70,Expensive,Average,11760.0
+7,White Gold Plated Princess,9.99,jewelry,3.0,400,Cheap,Average,3996.0
+8,Pierced Owl Rose Gold Plated Stainless Steel Double,10.99,jewelry,1.9,100,Cheap,Poor,1099.0
+9,WD 2TB Elements Portable External Hard Drive - USB 3.0 ,64.0,electronics,3.3,203,Mid-range,Average,12992.0
+10,SanDisk SSD PLUS 1TB Internal SSD - SATA III 6 Gb/s,109.0,electronics,2.9,470,Expensive,Poor,51230.0
+11,Silicon Power 256GB SSD 3D NAND A55 SLC Cache Performance Boost SATA III 2.5,109.0,electronics,4.8,319,Expensive,Excellent,34771.0
+12,WD 4TB Gaming Drive Works with Playstation 4 Portable External Hard Drive,114.0,electronics,4.8,400,Expensive,Excellent,45600.0
+13,Acer SB220Q bi 21.5 inches Full HD (1920 x 1080) IPS Ultra-Thin,599.0,electronics,2.9,250,Expensive,Poor,149750.0
+14,Samsung 49-Inch CHG90 144Hz Curved Gaming Monitor (LC49HG90DMNXZA) – Super Ultrawide Screen QLED ,999.99,electronics,2.2,140,Expensive,Poor,139998.6
+15,BIYLACLESEN Women's 3-in-1 Snowboard Jacket Winter Coats,56.99,clothing,2.6,235,Mid-range,Poor,13392.65
+16,Lock and Love Women's Removable Hooded Faux Leather Moto Biker Jacket,29.95,clothing,2.9,340,Cheap,Poor,10183.0
+17,Rain Jacket Women Windbreaker Striped Climbing Raincoats,39.99,clothing,3.8,679,Mid-range,Average,27153.21
+18,MBJ Women's Solid Short Sleeve Boat Neck V ,9.85,clothing,4.7,130,Cheap,Excellent,1280.5
+19,Opna Women's Short Sleeve Moisture,7.95,clothing,4.5,146,Cheap,Excellent,1160.7
+20,DANVOUY Womens T Shirt Casual Cotton Short,12.99,clothing,3.6,145,Cheap,Average,1883.55
+101,Wireless Headphones,49.99,electronics,4.5,320,Mid-range,Excellent,15996.8
+102,Running Shoes,79.99,clothing,4.2,150,Mid-range,Good,11998.5
+103,Coffee Maker,34.99,kitchen,4.0,200,Mid-range,Good,6998.0
+104,Python Programming Book,29.99,books,4.8,500,Cheap,Excellent,14995.0
+105,Yoga Mat,24.99,sports,4.3,180,Cheap,Good,4498.2
+106,Smart Watch,199.99,electronics,4.6,420,Expensive,Excellent,83995.8
+107,Backpack,44.99,clothing,4.1,290,Mid-range,Good,13047.1
+108,Bluetooth Speaker,59.99,electronics,4.4,310,Mid-range,Good,18596.9

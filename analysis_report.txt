@@ -1,0 +1,43 @@
+E-COMMERCE PRODUCT ANALYSIS REPORT
+========================================
+
+Total Products Analyzed: 28
+
+BASIC STATISTICS:
+        price  rating  num_reviews
+count   28.00   28.00        28.00
+mean   134.49    3.79       289.50
+std    234.44    0.90       149.76
+min      7.95    1.90        70.00
+25%     24.32    2.98       149.00
+50%     52.99    4.05       274.50
+75%    109.24    4.53       400.00
+max    999.99    4.80       679.00
+
+PRODUCTS PER CATEGORY:
+category
+clothing       12
+electronics     9
+jewelry         4
+kitchen         1
+books           1
+sports          1
+Name: count, dtype: int64
+
+AVERAGE PRICE PER CATEGORY:
+category
+electronics    256.11
+jewelry        221.00
+clothing        40.58
+kitchen         34.99
+books           29.99
+sports          24.99
+Name: price, dtype: float64
+
+TOP 5 HIGHEST RATED PRODUCTS:
+                                                                       title    category  price  rating
+Silicon Power 256GB SSD 3D NAND A55 SLC Cache Performance Boost SATA III 2.5 electronics 109.00     4.8
+   WD 4TB Gaming Drive Works with Playstation 4 Portable External Hard Drive electronics 114.00     4.8
+                                                     Python Programming Book       books  29.99     4.8
+                                                          Mens Cotton Jacket    clothing  55.99     4.7
+                                 MBJ Women's Solid Short Sleeve Boat Neck V     clothing   9.85     4.7
