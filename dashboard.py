@@ -1,11 +1,7 @@
-# ============================================================
-# STEP 4: DASHBOARD / VISUALIZATIONS
-# This file creates colorful charts and graphs
-# It saves one big dashboard image + individual charts
-# ============================================================
+# DASHBOARD / VISUALIZATIONS
 
 import pandas as pd
-import matplotlib.pyplot as plt    # For creating charts
+import matplotlib.pyplot as plt    
 import matplotlib.gridspec as gridspec
 import numpy as np
 
@@ -13,19 +9,13 @@ print("=" * 50)
 print("  CREATING DASHBOARD")
 print("=" * 50)
 
-# -------------------------------------------------------
-# LOAD clean data
-# -------------------------------------------------------
-
 df = pd.read_csv("clean_data.csv")
 print(f"\nLoaded {len(df)} products\n")
 
 # Color palette (same colors used throughout)
 COLORS = ["#4C72B0", "#DD8452", "#55A868", "#C44E52", "#8172B2", "#937860", "#DA8BC3"]
 
-# ============================================================
 # CREATE THE MAIN DASHBOARD (6 charts in one image)
-# ============================================================
 
 fig = plt.figure(figsize=(18, 12))
 fig.suptitle("E-Commerce Product Analysis Dashboard", fontsize=22, fontweight="bold", y=0.98)
@@ -33,9 +23,8 @@ fig.suptitle("E-Commerce Product Analysis Dashboard", fontsize=22, fontweight="b
 # Use GridSpec to arrange 6 charts in a 2-row, 3-column grid
 gs = gridspec.GridSpec(2, 3, figure=fig, hspace=0.45, wspace=0.35)
 
-# -------------------------------------------------------
-# CHART 1: Bar Chart — Number of Products per Category
-# -------------------------------------------------------
+# Bar Chart — Number of Products per Category
+
 ax1 = fig.add_subplot(gs[0, 0])
 
 category_count = df["category"].value_counts()
@@ -51,9 +40,8 @@ for i, val in enumerate(category_count.values):
 
 print("[1] Chart 1 created: Products per Category")
 
-# -------------------------------------------------------
-# CHART 2: Horizontal Bar — Average Price per Category
-# -------------------------------------------------------
+# Horizontal Bar — Average Price per Category
+
 ax2 = fig.add_subplot(gs[0, 1])
 
 avg_price = df.groupby("category")["price"].mean().sort_values()
@@ -67,9 +55,8 @@ for i, val in enumerate(avg_price.values):
 
 print("[2] Chart 2 created: Average Price per Category")
 
-# -------------------------------------------------------
-# CHART 3: Pie Chart — Price Label Distribution
-# -------------------------------------------------------
+# Pie Chart — Price Label Distribution
+
 ax3 = fig.add_subplot(gs[0, 2])
 
 price_dist = df["price_label"].value_counts()
@@ -85,9 +72,8 @@ ax3.set_title("Price Distribution", fontweight="bold")
 
 print("[3] Chart 3 created: Price Distribution Pie Chart")
 
-# -------------------------------------------------------
-# CHART 4: Scatter Plot — Price vs Rating
-# -------------------------------------------------------
+# Scatter Plot — Price vs Rating
+
 ax4 = fig.add_subplot(gs[1, 0])
 
 categories = df["category"].unique()
@@ -104,9 +90,8 @@ ax4.axhline(y=df["rating"].mean(), color="red", linestyle="--", alpha=0.5, label
 
 print("[4] Chart 4 created: Price vs Rating Scatter")
 
-# -------------------------------------------------------
-# CHART 5: Bar Chart — Top 5 Products by Revenue
-# -------------------------------------------------------
+#  Bar Chart — Top 5 Products by Revenue
+
 ax5 = fig.add_subplot(gs[1, 1])
 
 top5 = df.nlargest(5, "est_revenue")
@@ -121,9 +106,8 @@ for i, val in enumerate(top5["est_revenue"].values):
 
 print("[5] Chart 5 created: Top 5 by Revenue")
 
-# -------------------------------------------------------
-# CHART 6: Bar Chart — Avg Rating per Category
-# -------------------------------------------------------
+# Bar Chart — Avg Rating per Category
+
 ax6 = fig.add_subplot(gs[1, 2])
 
 avg_rating = df.groupby("category")["rating"].mean().sort_values(ascending=False)
@@ -142,16 +126,14 @@ for bar, val in zip(bars, avg_rating.values):
 
 print("[6] Chart 6 created: Avg Rating per Category")
 
-# -------------------------------------------------------
 # SAVE the dashboard as an image
-# -------------------------------------------------------
 
 plt.savefig("dashboard.png", dpi=150, bbox_inches="tight")
-print("\n✅ Dashboard saved as 'dashboard.png'")
+print("\n Dashboard saved as 'dashboard.png'")
 plt.show()   # Also display on screen
 
-print("\n✅ STEP 4 COMPLETE! All files are ready.")
-print("\n📁 Files created:")
+print("\n STEP 4 COMPLETE! All files are ready.")
+print("\n Files created:")
 print("   raw_data.csv       — Original collected data")
 print("   clean_data.csv     — Cleaned and processed data")
 print("   analysis_report.txt — Text analysis results")
