@@ -1,7 +1,4 @@
-# ============================================================
-# RUN_ALL.py — Run the ENTIRE PROJECT in one click
 # This runs all 4 steps automatically one by one
-# ============================================================
 
 import subprocess
 import sys
@@ -13,22 +10,22 @@ steps = [
     ("step4_dashboard.py",     "STEP 4: Dashboard"),
 ]
 
-print("🚀 RUNNING FULL E-COMMERCE ANALYSIS PIPELINE")
+print("RUNNING FULL E-COMMERCE ANALYSIS PIPELINE")
 print("=" * 55)
 
 for filename, label in steps:
     print(f"\n{'=' * 55}")
-    print(f"▶  {label}")
+    print(f" {label}")
     print(f"{'=' * 55}")
 
     result = subprocess.run([sys.executable, filename])  # Run each file
 
     if result.returncode != 0:
-        print(f"\n❌ ERROR in {filename}. Please fix it and try again.")
+        print(f"\n ERROR in {filename}. Please fix it and try again.")
         break
     else:
-        print(f"✅ {label} done!")
+        print(f"{label} done!")
 
 print("\n" + "=" * 55)
-print("🎉 ALL STEPS COMPLETE! Check your project folder.")
+print("ALL STEPS COMPLETE! Check your project folder.")
 print("=" * 55)
